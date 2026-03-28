@@ -33,7 +33,7 @@ public class MainMenuController {
     }
 
     public void onOption(ActionEvent e) {
-        System.out.println("Option");
+        mainView.switchPanelCard(SceneConstants.OPTIONMENU);
     }
 
     public void onCredit(ActionEvent e) {

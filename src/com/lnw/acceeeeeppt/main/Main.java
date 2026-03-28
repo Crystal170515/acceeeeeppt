@@ -7,6 +7,8 @@ import com.lnw.acceeeeeppt.scene.menu.MainMenuController;
 import com.lnw.acceeeeeppt.scene.menu.MainMenuView;
 import com.lnw.acceeeeeppt.scene.menu.NewGameController;
 import com.lnw.acceeeeeppt.scene.menu.NewGameView;
+import com.lnw.acceeeeeppt.scene.menu.OptionController;
+import com.lnw.acceeeeeppt.scene.menu.OptionView;
 import com.lnw.acceeeeeppt.ui.SceneConstants;
 
 public class Main {
@@ -15,12 +17,15 @@ public class Main {
             MainView mainView = new MainView();
             MainMenuView mainMenuView = new MainMenuView();
             NewGameView newGameView = new NewGameView();
+            OptionView optionView = new OptionView();
 
             new MainMenuController(mainMenuView, mainView);
             new NewGameController(mainView, newGameView);
+            new OptionController(mainView, optionView);
 
             mainView.registerPanel(mainMenuView, SceneConstants.MAINMENU);
             mainView.registerPanel(newGameView, SceneConstants.NEWGAMEMENU);
+            mainView.registerPanel(optionView, SceneConstants.OPTIONMENU);
 
             mainView.switchPanelCard(SceneConstants.MAINMENU);
             mainView.setFrameVisibility(true);
